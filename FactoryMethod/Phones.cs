@@ -6,98 +6,122 @@ using System.Threading.Tasks;
 
 namespace FactoryMethod
 {
-    internal class IPhoenPro : Phone
+    /// <summary>
+    /// phone super class
+    /// </summary>
+    internal abstract class BsaePhone
     {
+        internal abstract string BaseName { get; }
+        internal abstract string Name { get; }
         internal int Version { get; private set; }
 
-        public IPhoenPro(int version)
+        protected BsaePhone(int version)
         {
             Version = version;
         }
 
-        public bool PowerOff()
-        {
-            var result = DateTime.Now.Ticks % 2 == 0;
-            Console.WriteLine($"아이폰프로{Version} 전원 Off {result}");
-            return result;
-        }
+        internal string ModelName => $"{BaseName}{Name}{Version}";
 
-        public bool PowerOn()
+        protected void PrintPowerOnMessage() => Console.WriteLine($"{ModelName} 전원 on");
+        protected void PrintPowerOffMessage() => Console.WriteLine($"{ModelName} 전원 off");
+    }
+
+    /// <summary>
+    /// iphone super class
+    /// </summary>
+    internal abstract class IPhone : BsaePhone
+    {
+        internal const string MiniModel = "mini";
+        internal const string ProModel = "pro";
+
+        internal override string BaseName => "아이폰";
+
+        protected IPhone(int version) : base(version)
         {
-            var result = DateTime.Now.Ticks % 2 == 0;
-            Console.WriteLine($"아이폰프로{Version} 전원 On {result}");
-            return result;
         }
     }
 
-    internal class IPhoenMini : Phone
+    /// sub class들은 factory method pattern을 위해
+    /// phone interface를 확장한다.
+    /// BasePhone 으로 factory return type을 대체하여도 되는 구조이나 
+    /// BasePhone을 따라가지 않는 모델들의 확장성을 위해 phone interface로 한다.
+
+    /// <summary>
+    /// iphone pro sub class 
+    /// </summary>
+    internal class IPhonePro : IPhone, Phone
     {
-        internal int Version { get; private set; }
-
-        public IPhoenMini(int version)
+        
+        internal IPhonePro(int version) : base(version)
         {
-            Version = version;
         }
 
-        public bool PowerOff()
+        internal override string Name => "프로";
+
+        public void PowerOff() => PrintPowerOffMessage();
+
+        public void PowerOn() => PrintPowerOnMessage();
+    }
+
+    /// <summary>
+    /// iphone mini sub class
+    /// </summary>
+    internal class IPhoneMini : IPhone, Phone
+    {
+        public IPhoneMini(int version) : base(version)
         {
-            var result = DateTime.Now.Ticks % 2 == 0;
-            Console.WriteLine($"아이폰미니{Version} 전원 Off {result}");
-            return result;
         }
 
-        public bool PowerOn()
+        internal override string Name => "미니";
+
+        public void PowerOff() => PrintPowerOffMessage();
+
+        public void PowerOn() => PrintPowerOnMessage();
+    }
+    /// <summary>
+    /// galaxy super class
+    /// </summary>
+    internal abstract class Galaxy : BsaePhone
+    {
+        internal const string NoteModel = "note";
+        internal const string SModel = "s";
+
+        internal override string BaseName => "갤럭시";
+        protected Galaxy(int version) : base(version)
         {
-            var result = DateTime.Now.Ticks % 2 == 0;
-            Console.WriteLine($"아이폰미니{Version} 전원 On {result}");
-            return result;
         }
     }
 
-    internal class GalaxyS : Phone
+    /// <summary>
+    /// galaxy s sub class
+    /// </summary>
+    internal class GalaxyS : Galaxy, Phone
     {
-        internal int Version { get; private set; }
-
-        public GalaxyS(int version)
+        internal GalaxyS(int version) : base(version)
         {
-            Version = version;
-        }
-        public bool PowerOff()
-        {
-            var result = DateTime.Now.Ticks % 2 == 0;
-            Console.WriteLine($"갤럭시S{Version} 전원 Off {result}");
-            return result;
         }
 
-        public bool PowerOn()
-        {
-            var result = DateTime.Now.Ticks % 2 == 0;
-            Console.WriteLine($"갤럭시S{Version} 전원 On {result}");
-            return result;
-        }
+        internal override string Name => "S";
+
+        public void PowerOff() => PrintPowerOffMessage();
+
+        public void PowerOn() => PrintPowerOnMessage();
     }
 
-    internal class GalaxyNote : Phone
+    /// <summary>
+    /// galaxy note sub class
+    /// </summary>
+    internal class GalaxyNote : Galaxy, Phone
     {
-        internal int Version { get; private set; }
-
-        public GalaxyNote(int version)
+        internal GalaxyNote(int version) : base(version)
         {
-            Version = version;
-        }
-        public bool PowerOff()
-        {
-            var result = DateTime.Now.Ticks % 2 == 0;
-            Console.WriteLine($"갤럭시노트{Version} 전원 Off {result}");
-            return result;
         }
 
-        public bool PowerOn()
-        {
-            var result = DateTime.Now.Ticks % 2 == 0;
-            Console.WriteLine($"갤럭시노트{Version} 전원 On {result}");
-            return result;
-        }
+        internal override string Name => "노트";
+
+        public void PowerOff() => PrintPowerOffMessage();
+
+        public void PowerOn() => PrintPowerOnMessage();
     }
 
 }
