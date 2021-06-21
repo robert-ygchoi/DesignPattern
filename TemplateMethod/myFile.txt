@@ -1,0 +1,3 @@
+FileManager Template Method!!!
+MyFile Template Method!!!
+bye~ bye~
