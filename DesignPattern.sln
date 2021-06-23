@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite\Comp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateMethod", "TemplateMethod\TemplateMethod.csproj", "{4A4688B7-646E-446F-BF3A-6D5DAE7DEAD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.csproj", "{CAB4A771-C4FB-460A-9EE9-5B227691F446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.csproj", "{CAB4A771-C4FB-460A-9EE9-5B227691F446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interpreter", "Interpreter\Interpreter.csproj", "{3B4A79A6-0F40-47A1-BB6A-04B0DD6482E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{CAB4A771-C4FB-460A-9EE9-5B227691F446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAB4A771-C4FB-460A-9EE9-5B227691F446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAB4A771-C4FB-460A-9EE9-5B227691F446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4A79A6-0F40-47A1-BB6A-04B0DD6482E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4A79A6-0F40-47A1-BB6A-04B0DD6482E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4A79A6-0F40-47A1-BB6A-04B0DD6482E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4A79A6-0F40-47A1-BB6A-04B0DD6482E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
