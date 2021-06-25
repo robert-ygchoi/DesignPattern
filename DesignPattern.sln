@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interpreter", "Interpreter\Interpreter.csproj", "{3B4A79A6-0F40-47A1-BB6A-04B0DD6482E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{B76CBF9C-24C2-4C5E-A6B2-157A56E54562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{B76CBF9C-24C2-4C5E-A6B2-157A56E54562}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "State", "State\State.csproj", "{CF061104-1A56-464C-B7DC-C81D006BFFC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{B76CBF9C-24C2-4C5E-A6B2-157A56E54562}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B76CBF9C-24C2-4C5E-A6B2-157A56E54562}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B76CBF9C-24C2-4C5E-A6B2-157A56E54562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF061104-1A56-464C-B7DC-C81D006BFFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF061104-1A56-464C-B7DC-C81D006BFFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF061104-1A56-464C-B7DC-C81D006BFFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF061104-1A56-464C-B7DC-C81D006BFFC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
