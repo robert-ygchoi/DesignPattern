@@ -14,7 +14,7 @@ namespace Strategy
     //
     internal interface IRefrigeratorDoor
     {
-        void Work();
+        void Cooling();
     }
     
     //
@@ -48,7 +48,7 @@ namespace Strategy
             for (int idx = 0; idx < Doors.Length; idx++)
             {
                 Console.Write($"{GetDoorLocation(idx)}문 ");
-                Doors[idx].Work();
+                Doors[idx].Cooling();
             }
         }
     }
@@ -70,7 +70,7 @@ namespace Strategy
     {
         protected override int DoorCount => 2;
 
-        protected override string GetDoorLocation(int doorIdx) => doorIdx switch { 0 => "윗", 1 => "아랫", _ => throw new ArgumentOutOfRangeException("문은 총 네짝입니다.") };
+        protected override string GetDoorLocation(int doorIdx) => doorIdx switch { 0 => "윗", 1 => "아랫", _ => throw new ArgumentOutOfRangeException("문은 총 두짝입니다.") };
     }
 
     //
@@ -78,14 +78,14 @@ namespace Strategy
     //
     internal class KimchiDoor : IRefrigeratorDoor
     {
-        public void Work() => Console.WriteLine("잘익는 김치냉장고문");
+        public void Cooling() => Console.WriteLine("잘익는 김치냉장고문");
     }
     internal class FridgeDoor : IRefrigeratorDoor
     {
-        public void Work() => Console.WriteLine("너무 시원한 냉장고문");
+        public void Cooling() => Console.WriteLine("너무 시원한 냉장고문");
     }
     internal class FreezeDoor : IRefrigeratorDoor
     {
-        public void Work() => Console.WriteLine("꽁꽁 어는 냉동고문");
+        public void Cooling() => Console.WriteLine("꽁꽁 어는 냉동고문");
     }
 }
