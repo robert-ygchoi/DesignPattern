@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "State", "State\State.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Visitor", "Visitor\Visitor.csproj", "{7E7C2CC3-E60B-472B-B831-C499B6EEF427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strategy.csproj", "{B8A6C93E-C7F5-4FD6-8433-A104D040C832}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy", "Strategy\Strategy.csproj", "{B8A6C93E-C7F5-4FD6-8433-A104D040C832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{2FEEFE97-D3C6-47D2-849D-47464C911793}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{B8A6C93E-C7F5-4FD6-8433-A104D040C832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8A6C93E-C7F5-4FD6-8433-A104D040C832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8A6C93E-C7F5-4FD6-8433-A104D040C832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FEEFE97-D3C6-47D2-849D-47464C911793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FEEFE97-D3C6-47D2-849D-47464C911793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FEEFE97-D3C6-47D2-849D-47464C911793}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FEEFE97-D3C6-47D2-849D-47464C911793}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
